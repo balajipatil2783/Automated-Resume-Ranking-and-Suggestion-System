@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="auth-container" id="loginPage">
+    <h1>AI Resume Analyzer</h1>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div class="divider">OR</div>
+
+    <button class="google-btn" onclick="googleLogin()">
+        Login with Google
+    </button>
+
+    <p>Don't have an account?
+        <a href="#" onclick="signup()">Sign Up</a>
+    </p>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard-container" id="dashboardPage">
+    <h2>Resume Analyzer Dashboard</h2>
+
+    <div class="upload-box">
+        <input type="file" id="resumeFile" accept=".pdf,.txt">
+        <button onclick="analyzeResume()">Analyze Resume</button>
+    </div>
+
+    <div class="result-section">
+        <div class="score-card" id="scoreCard"></div>
+        <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
